@@ -25,12 +25,14 @@ SECRET_KEY = 'django-insecure-iwiis0t(92c%5u9bd&4jyfod&q$oandr8cr^!&98eoco%unz%j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.60.89',
+                 '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'hist',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,3 +123,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Tiempo de vida de la sesión en minutos (por defecto es 120 minutos)
+SESSION_COOKIE_AGE = 3600  # 1 hora
